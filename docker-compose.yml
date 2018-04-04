@@ -4,6 +4,8 @@ services:
     image: abiosoft/caddy:latest
     container_name: caddy
     restart: always
+    environment:
+      - ACME_AGREE=true
     ports:
       - "80:80"
       - "443:443"
