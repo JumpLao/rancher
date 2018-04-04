@@ -4,7 +4,7 @@ rancher.duriancorp.com {
     transparent
   }
   tls nattaphat.la@gmail.com {
-    ca https://acme-v01.api.letsencrypt.org/directory
+    ca https://acme-v02.api.letsencrypt.org/directory
   }
   log /var/log/rancher.log
 }
