@@ -8,13 +8,11 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /home/ubuntu/Caddyfile:/etc/Caddyfile
-      - /home/ubuntu/.caddy:/root/.caddy
+      - /home/cloud_durian/rancher/Caddyfile:/etc/Caddyfile
+      - /home/cloud_durian/rancher/.caddy:/root/.caddy
   rancher:
     container_name: rancher
     image: rancher/server:stable
     volumes:
-      - /home/ubuntu/rancher/mysql:/var/lib/mysql
-    ports:
-      - "8080:8080"
+      - /home/cloud_durian/rancher/mysql:/var/lib/mysql
     restart: unless-stopped
