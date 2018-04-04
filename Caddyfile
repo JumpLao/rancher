@@ -1,0 +1,10 @@
+rancher.duriancorp.com {
+  proxy / rancher:8080 {
+    websocket
+    transparent
+  }
+  tls nattaphat.la@gmail.com {
+    ca https://acme-v01.api.letsencrypt.org/directory
+  }
+  log /var/log/rancher.log
+}

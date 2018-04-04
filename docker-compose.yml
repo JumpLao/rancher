@@ -1,0 +1,20 @@
+version: '3'
+services:
+  caddy:
+    image: abiosoft/caddy:latest
+    container_name: caddy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /home/ubuntu/Caddyfile:/etc/Caddyfile
+      - /home/ubuntu/.caddy:/root/.caddy
+  rancher:
+    container_name: rancher
+    image: rancher/server:stable
+    volumes:
+      - /home/ubuntu/rancher/mysql:/var/lib/mysql
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
