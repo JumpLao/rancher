@@ -15,6 +15,5 @@ services:
   rancher:
     container_name: rancher
     image: rancher/server:stable
-    volumes:
-      - /home/cloud_durian/rancher/mysql:/var/lib/mysql
+    command: --db-host 10.148.0.3 --db-port 3306 --db-user rancher --db-pass durian2017 --db-name rancher
     restart: unless-stopped
