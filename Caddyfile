@@ -3,8 +3,9 @@ rancher.duriancorp.com {
     websocket
     transparent
   }
-  tls nattaphat.la@gmail.com {
-    ca https://acme-v02.api.letsencrypt.org/directory
-  }
+  #tls nattaphat.la@gmail.com {
+  #  ca https://acme-v02.api.letsencrypt.org/directory
+  #}
+  tls off
   log /var/log/rancher.log
 }
