@@ -1,4 +1,4 @@
-rancher.duriancorp.co {
+rancher.witsawa.com {
   proxy / rancher:8080 {
     websocket
     transparent
