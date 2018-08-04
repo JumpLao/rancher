@@ -1,4 +1,4 @@
-rancher2.witsawa.com {
+rancher.masspaks.xyz {
   proxy / rancher:8080 {
     websocket
     transparent
